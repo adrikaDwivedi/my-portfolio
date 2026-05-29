@@ -147,22 +147,8 @@ export default function Home() {
       <main>
         <Hero scrollTo={scrollTo} />
 
-        {/* Dark sections below */}
-        <div className="dark bg-background text-foreground">
-          <div className="fixed inset-0 z-0 pointer-events-none top-[100vh]">
-            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] mix-blend-screen" />
-            <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px] mix-blend-screen" />
-          </div>
-          <div className="relative z-10">
-            <Projects />
-            <Dashboard />
-          </div>
-          <footer className="relative z-10 py-8 text-center border-t border-white/5">
-            <p className="text-muted-foreground text-xs font-mono tracking-widest uppercase">
-              &copy; {new Date().getFullYear()} Adrika Dwivedi. Designed & Built with intent.
-            </p>
-          </footer>
-        </div>
+        <Projects />
+        <Dashboard />
       </main>
     </div>
   );
