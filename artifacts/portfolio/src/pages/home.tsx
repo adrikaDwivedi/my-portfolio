@@ -4,7 +4,6 @@ import { Moon, Menu, X } from "lucide-react";
 
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
-import { Dashboard } from "@/components/sections/Dashboard";
 
 const NAV_ITEMS = [
   { label: "PROFILE", id: "hero" },
@@ -148,7 +147,6 @@ export default function Home() {
         <Hero scrollTo={scrollTo} />
 
         <Projects />
-        <Dashboard />
       </main>
     </div>
   );
