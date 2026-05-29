@@ -2,15 +2,29 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowRight, Terminal } from "lucide-react";
 
 const STACK = [
-  { category: "Languages",     items: "Java, JavaScript, TypeScript" },
-  { category: "Frontend",      items: "React, Next.js, Redux" },
-  { category: "Mobile",        items: "React Native, Expo" },
-  { category: "Backend",       items: "Node.js, Express.js" },
-  { category: "Databases",     items: "Firebase, MongoDB" },
-  { category: "Tools & DevOps",items: "Git, GitHub, Vercel" },
+  {
+    category: "Languages",
+    items: ["JavaScript", "C++"],
+  },
+  {
+    category: "Mobile Development",
+    items: ["React Native", "Expo", "AsyncStorage", "Push Notifications", "REST API Integration", "Cross-platform Android/iOS Deployment"],
+  },
+  {
+    category: "Web Development",
+    items: ["React.js", "React Hooks", "HTML", "CSS", "Responsive Web Design", "Component-based Architecture", "DOM"],
+  },
+  {
+    category: "Tools & Version Control",
+    items: ["Git", "GitHub", "Vercel"],
+  },
+  {
+    category: "Concepts",
+    items: ["Data Structures & Algorithms", "APIs", "Responsive UI/UX"],
+  },
 ];
 
-export function TechStack({ scrollTo }: { scrollTo?: (id: string) => void }) {
+export function TechStack({ scrollTo: _scrollTo }: { scrollTo?: (id: string) => void }) {
   return (
     <section
       id="techstack"
@@ -44,16 +58,23 @@ export function TechStack({ scrollTo }: { scrollTo?: (id: string) => void }) {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: idx * 0.06 }}
-                  className="flex items-baseline justify-between py-4"
+                  transition={{ duration: 0.35, delay: idx * 0.07 }}
+                  className="py-4"
                   data-testid={`row-stack-${idx}`}
                 >
-                  <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 tracking-tight">
+                  <p className="text-[11px] font-semibold text-gray-800 dark:text-gray-200 tracking-tight mb-2">
                     {category}
-                  </span>
-                  <span className="font-mono text-[11px] tracking-widest text-gray-400 dark:text-gray-500 uppercase text-right">
-                    {items}
-                  </span>
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {items.map((item) => (
+                      <span
+                        key={item}
+                        className="font-mono text-[10px] tracking-wider text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 px-2 py-0.5"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </motion.div>
               ))}
             </div>

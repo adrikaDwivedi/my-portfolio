@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     name: "gulpy",
     description: "A smart water intake tracking mobile app with goal tracking, streak systems, and intelligent daily reminders using Expo Notifications.",
-    tags: ["GOAL-TRACKING", "STREAKS", "NOTIFICATIONS"],
+    tags: ["React Native", "Expo", "Push Notifications", "AsyncStorage", "JavaScript"],
     language: "JavaScript",
     langColor: "#f1e05a",
     stars: 12,
@@ -14,36 +14,36 @@ const PROJECTS = [
     featured: true,
   },
   {
-    name: "student-info-portal",
-    description: "Comprehensive portal for student data management with form handling, Firebase authentication, and real-time updates.",
-    tags: ["FIREBASE", "AUTH", "FORMS"],
-    language: "TypeScript",
-    langColor: "#3178c6",
+    name: "cap782",
+    description: "Student information portal with form handling, Firebase authentication, and real-time database operations for academic data management.",
+    tags: ["React.js", "Firebase", "REST API", "HTML/CSS", "JavaScript"],
+    language: "JavaScript",
+    langColor: "#f1e05a",
     stars: 8,
     forks: 2,
-    github: "https://github.com/adrikaDwivedi/student-info-portal",
+    github: "https://github.com/adrikaDwivedi/cap782",
     featured: false,
   },
   {
-    name: "location-share",
-    description: "Real-time location sharing platform with Firebase backend and Google Maps integration. Built for scale and low-latency updates.",
-    tags: ["MAPS", "REAL-TIME", "FIREBASE"],
+    name: "trackemApp",
+    description: "Real-time location tracking mobile application with map integration, live position updates, and cross-platform Android/iOS deployment.",
+    tags: ["React Native", "Expo", "Maps API", "REST API", "Cross-platform"],
     language: "JavaScript",
     langColor: "#f1e05a",
     stars: 15,
     forks: 5,
-    github: "https://github.com/adrikaDwivedi/location-share",
+    github: "https://github.com/adrikaDwivedi/trackemApp",
     featured: false,
   },
   {
-    name: "task-manager-app",
-    description: "Productivity app with full CRUD operations, advanced filtering, and efficient state management. Clean and minimal interface.",
-    tags: ["CRUD", "REDUX", "ASYNC-STORAGE"],
+    name: "taskease",
+    description: "Productivity app with full CRUD task management, priority filtering, persistent storage via AsyncStorage, and clean component-based architecture.",
+    tags: ["React Native", "AsyncStorage", "Redux", "JavaScript", "Responsive UI"],
     language: "JavaScript",
     langColor: "#f1e05a",
     stars: 6,
     forks: 1,
-    github: "https://github.com/adrikaDwivedi/tasker-web-app",
+    github: "https://github.com/adrikaDwivedi/taskease",
     featured: false,
   },
 ];
@@ -122,7 +122,6 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     className="text-gray-300 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                    data-testid={`link-project-external-${project.name}`}
                   >
                     <ArrowUpRight size={14} />
                   </a>
