@@ -4,10 +4,7 @@ import { Moon, Menu, X } from "lucide-react";
 
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
-import { Experience } from "@/components/sections/Experience";
 import { Dashboard } from "@/components/sections/Dashboard";
-import { Achievements } from "@/components/sections/Achievements";
-import { Contact } from "@/components/sections/Contact";
 
 const NAV_ITEMS = [
   { label: "PROFILE", id: "hero" },
@@ -158,10 +155,7 @@ export default function Home() {
           </div>
           <div className="relative z-10">
             <Projects />
-            <Experience />
             <Dashboard />
-            <Achievements />
-            <Contact />
           </div>
           <footer className="relative z-10 py-8 text-center border-t border-white/5">
             <p className="text-muted-foreground text-xs font-mono tracking-widest uppercase">
