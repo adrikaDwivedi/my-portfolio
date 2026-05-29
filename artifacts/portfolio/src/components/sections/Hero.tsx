@@ -1,140 +1,158 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail, Code2, Smartphone, Terminal } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { useEffect, useState } from "react";
-
-const TITLES = [
-  "Mobile App Developer",
-  "Frontend Engineer",
-  "React Native Developer",
-  "Problem Solver"
-];
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
-  const [titleIndex, setTitleIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTitleIndex((prev) => (prev + 1) % TITLES.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="hero" className="min-h-[100dvh] flex items-center justify-center pt-20 px-6 relative">
-      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-start"
+    <section
+      id="hero"
+      className="relative min-h-screen bg-white flex items-center overflow-hidden"
+      style={{
+        backgroundImage: "radial-gradient(circle, #d1d5db 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+      }}
+    >
+      {/* Left sidebar */}
+      <div className="fixed left-0 top-0 bottom-0 z-40 w-14 hidden md:flex flex-col items-center justify-between py-10 border-r border-gray-100 bg-white/80 backdrop-blur-sm">
+        <div className="flex flex-col items-center gap-5 mt-20">
+          <a
+            href="https://github.com/adrika-dwivedi"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-400 hover:text-gray-900 transition-colors"
+            data-testid="link-sidebar-github"
+          >
+            <Github size={17} />
+          </a>
+          <a
+            href="https://linkedin.com/in/adrika-dwivedi"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-400 hover:text-gray-900 transition-colors"
+            data-testid="link-sidebar-linkedin"
+          >
+            <Linkedin size={17} />
+          </a>
+          <a
+            href="mailto:adrika@example.com"
+            className="text-gray-400 hover:text-gray-900 transition-colors"
+            data-testid="link-sidebar-email"
+          >
+            <Mail size={17} />
+          </a>
+        </div>
+        <div
+          className="text-[10px] tracking-[0.25em] text-gray-300 uppercase font-mono"
+          style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
-          <Badge variant="outline" className="mb-6 border-primary/30 text-primary bg-primary/5 py-1.5 px-4 font-mono">
-            Available for opportunities
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-4 leading-tight">
-            Hi, I'm <span className="text-gradient-amber">Adrika</span><br />
-            Dwivedi.
-          </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground font-mono mb-8 h-8 flex items-center">
-            <span className="text-primary mr-2">&gt;</span> 
-            <motion.span
-              key={titleIndex}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block"
-            >
-              {TITLES[titleIndex]}
-            </motion.span>
-            <motion.span 
-              animate={{ opacity: [0, 1, 0] }} 
-              transition={{ repeat: Infinity, duration: 0.8 }}
-              className="inline-block w-3 h-6 bg-primary ml-1 align-middle"
-            />
-          </div>
-          <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-            I build polished, high-performance mobile and web products that feel alive. 
-            Obsessed with fluid interfaces and flawless user experiences.
-          </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <Button onClick={() => scrollTo("projects")} size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] font-semibold px-8 h-12">
-              View Projects
-            </Button>
-            <Button onClick={() => window.open('/resume.pdf')} variant="outline" size="lg" className="rounded-full border-white/10 hover:bg-white/5 hover:border-primary/50 transition-all font-semibold px-8 h-12">
-              Download Resume
-            </Button>
-            <Button onClick={() => scrollTo("contact")} variant="ghost" size="lg" className="rounded-full hover:bg-white/5 hover:text-primary transition-all font-semibold px-8 h-12">
-              Contact Me
-            </Button>
-          </div>
-          
-          <div className="flex items-center gap-6 mt-12">
-            <a href="https://github.com/adrika-dwivedi" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github size={24} />
-            </a>
-            <a href="https://linkedin.com/in/adrika-dwivedi" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin size={24} />
-            </a>
-            <a href="mailto:example@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail size={24} />
-            </a>
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="hidden md:flex justify-center relative"
-        >
-          {/* Abstract Centerpiece */}
-          <div className="relative w-full max-w-md aspect-square">
-            <motion.div 
-              animate={{ rotate: 360 }} 
-              transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-              className="absolute inset-0 rounded-full border border-primary/20 border-dashed"
-            />
-            <motion.div 
-              animate={{ rotate: -360 }} 
-              transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
-              className="absolute inset-8 rounded-full border border-secondary/20 border-dashed"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl border border-white/10 flex items-center justify-center shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-500 cursor-pointer">
-                <Code2 size={64} className="text-primary/80" />
+          adrika.dev
+        </div>
+      </div>
+
+      {/* Main content */}
+      <div className="w-full pl-14 md:pl-20">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 py-20 grid md:grid-cols-2 gap-16 items-center min-h-screen">
+
+          {/* Left column */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            {/* Label */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-5 h-0.5 bg-red-700" />
+              <span className="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-mono">
+                Introduction
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-5xl md:text-6xl lg:text-[72px] font-black leading-[1.05] tracking-tight text-gray-950 mb-8">
+              Hello, my name is{" "}
+              <span className="text-red-700">Adrika.</span>
+            </h1>
+
+            {/* Body */}
+            <div className="space-y-4 font-mono text-sm text-gray-600 leading-relaxed mb-10 max-w-[440px]">
+              <p>
+                My areas of interest include{" "}
+                <strong className="text-gray-900">mobile development</strong>, building
+                polished UI/UX, and contributing to{" "}
+                <strong className="text-gray-900">open source</strong>.
+              </p>
+              <p>
+                With a{" "}
+                <strong className="text-gray-900">user-first focus</strong>, I enjoy
+                creating clean and scalable solutions that improve application
+                performance, ease of maintenance, and user experience.
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.open("/resume.pdf")}
+                className="inline-flex items-center gap-2 bg-gray-950 text-white px-7 py-3.5 text-[11px] font-mono tracking-[0.2em] uppercase hover:bg-gray-800 transition-colors"
+                data-testid="button-request-resume"
+              >
+                Request Resume <ArrowRight size={13} />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => scrollTo("contact")}
+                className="inline-flex items-center gap-2 border border-gray-900 text-gray-900 px-7 py-3.5 text-[11px] font-mono tracking-[0.2em] uppercase hover:bg-gray-50 transition-colors"
+                data-testid="button-contact-me"
+              >
+                Contact Me
+              </motion.button>
+            </div>
+          </motion.div>
+
+          {/* Right column — framed visual */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="hidden md:flex justify-center items-center"
+          >
+            <div className="relative">
+              {/* Offset shadow frame */}
+              <div className="absolute inset-0 translate-x-4 translate-y-4 border border-gray-200" />
+
+              {/* Main frame */}
+              <div className="relative border border-gray-300 bg-white w-64 h-80 lg:w-72 lg:h-96 overflow-hidden">
+                {/* Gradient placeholder */}
+                <div className="w-full h-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 flex flex-col items-center justify-center gap-4">
+                  {/* Initials circle */}
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-black text-white tracking-tighter">AD</span>
+                  </div>
+                  <div className="text-center px-6">
+                    <p className="font-mono text-[10px] tracking-widest text-gray-400 uppercase">Software Engineer</p>
+                    <p className="font-mono text-[10px] tracking-widest text-gray-400 uppercase">React Native Dev</p>
+                  </div>
+                  {/* Decorative lines */}
+                  <div className="absolute bottom-16 left-0 right-0 flex flex-col gap-1.5 px-6">
+                    <div className="h-px bg-gray-200" />
+                    <div className="h-px bg-gray-200 opacity-60" />
+                  </div>
+                </div>
+
+                {/* Bottom label */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gray-950 text-white px-3 py-2">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase">
+                    S.E. @ India
+                  </span>
+                </div>
               </div>
             </div>
-            {/* Floating Elements */}
-            <motion.div 
-              animate={{ y: [-10, 10, -10] }} 
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute top-10 right-10 w-16 h-16 rounded-xl bg-card border border-white/10 flex items-center justify-center shadow-lg"
-            >
-              <Smartphone size={24} className="text-secondary" />
-            </motion.div>
-            <motion.div 
-              animate={{ y: [10, -10, 10] }} 
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-20 left-4 w-16 h-16 rounded-xl bg-card border border-white/10 flex items-center justify-center shadow-lg"
-            >
-              <Terminal size={24} className="text-primary" />
-            </motion.div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+        </div>
       </div>
-      
-      <motion.div 
-        animate={{ y: [0, 10, 0] }} 
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary cursor-pointer"
-        onClick={() => scrollTo("about")}
-      >
-        <ChevronDown size={32} />
-      </motion.div>
     </section>
   );
 }
