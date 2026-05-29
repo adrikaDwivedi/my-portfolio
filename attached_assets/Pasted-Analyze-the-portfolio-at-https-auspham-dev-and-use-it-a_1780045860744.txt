@@ -1,0 +1,471 @@
+Analyze the portfolio at https://auspham.dev and use it as inspiration for overall quality, smoothness, personality, and user experience. Do not copy the design, assets, content, layout, branding, or code. Instead, create a unique portfolio for me with a similar premium, modern, interactive feel.
+About Me
+Name: Adrika Dwivedi
+Role: Software Engineer | Frontend Developer | React Native Developer
+Location: India
+Skills:
+
+
+React Native
+
+
+React.js
+
+
+Next.js
+
+
+JavaScript
+
+
+TypeScript
+
+
+Firebase
+
+
+Node.js
+
+
+Express.js
+
+
+MongoDB
+
+
+Java
+
+
+C++
+
+
+Git & GitHub
+
+
+Portfolio Goals
+The portfolio should feel:
+
+
+Modern and premium
+
+
+Interactive and memorable
+
+
+Developer-focused
+
+
+Recruiter-friendly
+
+
+Fast and responsive
+
+
+Mobile-first
+
+
+Visually impressive without being overwhelming
+
+
+Design Direction
+Create a completely original design with:
+
+
+Dark theme with warm accent colors
+
+
+Glassmorphism and subtle glow effects
+
+
+Smooth page transitions
+
+
+Elegant typography
+
+
+Floating background elements
+
+
+Modern card layouts
+
+
+High-quality micro-interactions
+
+
+Clean spacing and visual hierarchy
+
+
+Sections
+1. Hero Section
+Full-screen hero section containing:
+
+
+Animated introduction
+
+
+"Hi, I'm Adrika Dwivedi"
+
+
+"Software Engineer & React Native Developer"
+
+
+Dynamic typing effect showing:
+
+
+Mobile App Developer
+
+
+Frontend Engineer
+
+
+React Native Developer
+
+
+Problem Solver
+
+
+
+
+Buttons:
+
+
+View Projects
+
+
+Download Resume
+
+
+Contact Me
+
+
+Include subtle animations and a unique visual centerpiece.
+
+2. About Me
+Create an engaging story-driven section.
+Topics:
+
+
+Passion for building user-focused products
+
+
+Experience in frontend and mobile development
+
+
+Interest in creating polished UI/UX
+
+
+Continuous learning mindset
+
+
+Add interactive elements instead of plain text blocks.
+
+3. Skills Section
+Display skills using an interactive format.
+Categories:
+
+
+Frontend
+
+
+Mobile Development
+
+
+Backend
+
+
+Databases
+
+
+Tools
+
+
+Use:
+
+
+Animated skill cards
+
+
+Hover effects
+
+
+Smooth transitions
+
+
+Icons and visual indicators
+
+
+
+4. Projects Section
+Create beautiful project showcase cards.
+Featured Projects:
+Gulpy
+Water intake tracking mobile application featuring:
+
+
+Goal tracking
+
+
+Streak system
+
+
+Smart reminders
+
+
+Animated interactions
+
+
+Expo Notifications
+
+
+Student Information Portal
+
+
+Next.js
+
+
+Firebase integration
+
+
+Form management
+
+
+Authentication
+
+
+Location Sharing App
+
+
+React Native
+
+
+Real-time location sharing
+
+
+Firebase backend
+
+
+Maps integration
+
+
+Task Management App
+
+
+React Native
+
+
+CRUD operations
+
+
+Filtering
+
+
+State management
+
+
+For each project include:
+
+
+Overview
+
+
+Technologies used
+
+
+Key features
+
+
+Live demo button
+
+
+GitHub button
+
+
+Interactive hover animations
+
+
+
+5. Experience Timeline
+Create an animated vertical timeline.
+Include:
+
+
+Internships
+
+
+Freelance work
+
+
+Open Source Contributions
+
+
+Personal Projects
+
+
+Use smooth scroll-based animations.
+
+6. Achievements
+Interactive cards showcasing:
+
+
+Open Source Contributions
+
+
+Technical Projects
+
+
+Problem Solving Experience
+
+
+Mobile Development Expertise
+
+
+
+7. Contact Section
+Modern contact experience with:
+
+
+Contact form
+
+
+Email
+
+
+LinkedIn
+
+
+GitHub
+
+
+Add engaging animations when submitting.
+
+Animations
+Implement premium animations using Framer Motion:
+
+
+Reveal animations
+
+
+Staggered entrances
+
+
+Magnetic buttons
+
+
+Smooth hover interactions
+
+
+Scroll-triggered animations
+
+
+Floating background effects
+
+
+Cursor interactions
+
+
+Page transitions
+
+
+Animations should feel premium and smooth, not distracting.
+
+Technical Requirements
+Use:
+
+
+Next.js 15
+
+
+TypeScript
+
+
+Tailwind CSS
+
+
+Framer Motion
+
+
+Lucide Icons
+
+
+Responsive Design
+
+
+SEO Optimization
+
+
+Accessibility Best Practices
+
+
+Performance Requirements
+
+
+Lighthouse score above 90
+
+
+Optimized images
+
+
+Smooth 60 FPS animations
+
+
+Lazy loading
+
+
+Clean architecture
+
+
+Reusable components
+
+
+Deliverables
+Generate:
+
+
+Complete project structure
+
+
+Component architecture
+
+
+Folder organization
+
+
+Tailwind setup
+
+
+Full source code
+
+
+Responsive layouts
+
+
+Animation implementation
+
+
+SEO metadata
+
+
+Deployment instructions
+
+
+The final result should feel like a world-class software engineer portfolio that could compete with top developer portfolios while maintaining a unique identity and not copying the reference site.
+
+One addition I'd strongly recommend: add a "Living Dashboard" section showing:
+
+
+Years coding
+
+
+Apps built
+
+
+GitHub contributions
+
+
+Current focus
+
+
+Technologies currently learning
+
+
+That kind of interactive personal data panel matches the feel you're drawn to and helps recruiters understand you in seconds.
