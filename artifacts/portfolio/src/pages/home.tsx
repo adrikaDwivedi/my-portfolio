@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Menu, X } from "lucide-react";
 
 import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Dashboard } from "@/components/sections/Dashboard";
@@ -159,8 +157,6 @@ export default function Home() {
             <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px] mix-blend-screen" />
           </div>
           <div className="relative z-10">
-            <About />
-            <Skills />
             <Projects />
             <Experience />
             <Dashboard />
