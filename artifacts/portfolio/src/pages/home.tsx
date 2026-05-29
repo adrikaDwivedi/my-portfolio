@@ -5,11 +5,13 @@ import { Moon, Menu, X } from "lucide-react";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { TechStack } from "@/components/sections/TechStack";
+import { OpenSource } from "@/components/sections/OpenSource";
 
 const NAV_ITEMS = [
   { label: "PROFILE", id: "hero" },
   { label: "PROJECTS", id: "projects" },
   { label: "TOOLKIT", id: "techstack" },
+  { label: "OPEN SOURCE", id: "opensource" },
 ];
 
 export default function Home() {
@@ -148,6 +150,7 @@ export default function Home() {
 
         <Projects />
         <TechStack scrollTo={scrollTo} />
+        <OpenSource />
       </main>
     </div>
   );
