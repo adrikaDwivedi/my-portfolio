@@ -4,12 +4,12 @@ import { Moon, Menu, X } from "lucide-react";
 
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
+import { TechStack } from "@/components/sections/TechStack";
 
 const NAV_ITEMS = [
   { label: "PROFILE", id: "hero" },
   { label: "PROJECTS", id: "projects" },
-  { label: "EXPERIENCE", id: "experience" },
-  { label: "CONTACT", id: "contact" },
+  { label: "TOOLKIT", id: "techstack" },
 ];
 
 export default function Home() {
@@ -147,6 +147,7 @@ export default function Home() {
         <Hero scrollTo={scrollTo} />
 
         <Projects />
+        <TechStack scrollTo={scrollTo} />
       </main>
     </div>
   );
