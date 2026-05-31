@@ -17,7 +17,6 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
     >
       {/* Left sidebar — hidden on mobile */}
       <div className="fixed left-0 top-0 bottom-0 z-40 w-12 md:w-14 hidden md:flex flex-col items-center justify-between py-10 border-r border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm transition-colors duration-300">
-        {/* Icons — vertically centered */}
         <div className="flex-1 flex flex-col items-center justify-center gap-6">
           {SOCIAL_LINKS.map(({ href, icon, testId }) => (
             <a
@@ -32,7 +31,6 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             </a>
           ))}
         </div>
-        {/* Bottom watermark */}
         <div
           className="text-[9px] tracking-[0.25em] text-gray-300 dark:text-gray-700 uppercase font-mono select-none flex-shrink-0"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
@@ -64,7 +62,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               <span className="text-red-700 dark:text-red-500">Adrika.</span>
             </h1>
 
-            <div className="space-y-3 font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8 md:mb-10 max-w-[440px]">
+            <div className="space-y-3 font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 max-w-[440px]">
               <p>
                 My areas of interest include{" "}
                 <strong className="text-gray-900 dark:text-gray-100">mobile development</strong>, building
@@ -78,6 +76,25 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                 maintenance, and user experience.
               </p>
             </div>
+
+            {/* Gap year note — subtle editorial aside */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mb-8 max-w-[440px]"
+            >
+              <div className="border-l-2 border-gray-200 dark:border-gray-700 pl-4 py-1 group">
+                <p className="font-mono text-[9px] tracking-[0.3em] text-gray-300 dark:text-gray-600 uppercase mb-1.5">
+                  2024 · Gap Year
+                </p>
+                <p className="font-mono text-[11px] text-gray-400 dark:text-gray-500 leading-relaxed italic">
+                  Stepped away briefly for bilateral MPFL reconstruction surgery —
+                  two legs, two recoveries, one mindset. Used the time to learn,
+                  reflect, and come back with sharper focus.
+                </p>
+              </div>
+            </motion.div>
 
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <motion.a
