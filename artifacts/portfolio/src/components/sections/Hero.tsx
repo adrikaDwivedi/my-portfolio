@@ -2,10 +2,22 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const SOCIAL_LINKS = [
-  { href: "https://github.com/adrikaDwivedi",        icon: <Github size={16} />,   testId: "github" },
-  { href: "https://www.linkedin.com/in/adrika-dwiv/", icon: <Linkedin size={16} />, testId: "linkedin" },
-  { href: "https://x.com/akdrinni",                   icon: <Twitter size={16} />,  testId: "x" },
-  { href: "mailto:adrikad97@gmail.com",               icon: <Mail size={16} />,     testId: "email" },
+  {
+    href: "https://github.com/adrikaDwivedi",
+    icon: <Github size={16} />,
+    testId: "github",
+  },
+  {
+    href: "https://www.linkedin.com/in/adrika-dwiv/",
+    icon: <Linkedin size={16} />,
+    testId: "linkedin",
+  },
+  { href: "https://x.com/akdrinni", icon: <Twitter size={16} />, testId: "x" },
+  {
+    href: "mailto:adrikad97@gmail.com",
+    icon: <Mail size={16} />,
+    testId: "email",
+  },
 ];
 
 export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
@@ -13,7 +25,11 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
     <section
       id="hero"
       className="relative min-h-screen bg-white dark:bg-gray-950 flex items-center overflow-hidden transition-colors duration-300"
-      style={{ backgroundImage: "radial-gradient(circle, var(--dot) 1px, transparent 1px)", backgroundSize: "28px 28px" }}
+      style={{
+        backgroundImage:
+          "radial-gradient(circle, var(--dot) 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+      }}
     >
       {/* Left sidebar — hidden on mobile */}
       <div className="fixed left-0 top-0 bottom-0 z-40 w-12 md:w-14 hidden md:flex flex-col items-center justify-between py-10 border-r border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm transition-colors duration-300">
@@ -42,7 +58,6 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
       {/* Main content */}
       <div className="w-full md:pl-14">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 py-16 md:py-20 grid md:grid-cols-2 gap-10 lg:gap-16 items-center min-h-screen">
-
           {/* Left column */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -65,15 +80,23 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             <div className="space-y-3 font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 max-w-[440px]">
               <p>
                 My areas of interest include{" "}
-                <strong className="text-gray-900 dark:text-gray-100">mobile development</strong>, building
-                polished UI/UX, and contributing to{" "}
-                <strong className="text-gray-900 dark:text-gray-100">open source</strong>.
+                <strong className="text-gray-900 dark:text-gray-100">
+                  mobile development
+                </strong>
+                , building polished UI/UX, and contributing to{" "}
+                <strong className="text-gray-900 dark:text-gray-100">
+                  open source
+                </strong>
+                .
               </p>
               <p>
                 With a{" "}
-                <strong className="text-gray-900 dark:text-gray-100">user-first focus</strong>, I enjoy
-                creating clean and scalable solutions that improve application performance, ease of
-                maintenance, and user experience.
+                <strong className="text-gray-900 dark:text-gray-100">
+                  user-first focus
+                </strong>
+                , I enjoy creating clean and scalable solutions that improve
+                application performance, ease of maintenance, and user
+                experience.
               </p>
             </div>
 
@@ -89,9 +112,9 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                   2025 · Gap Year
                 </p>
                 <p className="font-mono text-[11px] text-gray-400 dark:text-gray-500 leading-relaxed italic">
-                  Stepped away briefly for bilateral MPFL reconstruction surgery —
-                  two legs, two recoveries, one mindset. Used the time to learn,
-                  reflect, and come back with sharper focus.
+                  Stepped away briefly for bilateral MPFL reconstruction surgery
+                  — two legs, two recoveries, one mindset. Used the time to
+                  learn, reflect, and come back with sharper focus.
                 </p>
               </div>
             </motion.div>
@@ -146,19 +169,22 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 border border-gray-200 dark:border-gray-800" />
               <div className="relative border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 w-56 sm:w-64 md:w-60 lg:w-72 overflow-hidden">
                 <img
-                  src="/adrika.jpeg"
+                  src={`${import.meta.env.BASE_URL}adrika.jpeg`}
                   alt="Adrika Dwivedi"
                   className="w-full object-cover object-top"
                   style={{ height: "340px" }}
                 />
                 <div className="bg-gray-950 dark:bg-gray-800 text-white px-3 py-2 flex items-center justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase">S.E. @ India</span>
-                  <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase">React Native</span>
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase">
+                    S.E. @ India
+                  </span>
+                  <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase">
+                    React Native
+                  </span>
                 </div>
               </div>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
