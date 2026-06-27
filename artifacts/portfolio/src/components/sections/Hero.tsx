@@ -146,7 +146,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               <div className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 border border-gray-200 dark:border-gray-800" />
               <div className="relative border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 w-56 sm:w-64 md:w-60 lg:w-72 overflow-hidden">
                 <img
-                  src="/adrika.jpeg"
+                  src="/attached_assets/adrika-image.jpeg"
                   alt="Adrika Dwivedi"
                   className="w-full object-cover object-top"
                   style={{ height: "340px" }}
