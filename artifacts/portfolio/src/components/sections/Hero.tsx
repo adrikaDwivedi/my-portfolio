@@ -86,7 +86,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             >
               <div className="border-l-2 border-gray-200 dark:border-gray-700 pl-4 py-1 group">
                 <p className="font-mono text-[9px] tracking-[0.3em] text-gray-300 dark:text-gray-600 uppercase mb-1.5">
-                  2024 · Gap Year
+                  2025 · Gap Year
                 </p>
                 <p className="font-mono text-[11px] text-gray-400 dark:text-gray-500 leading-relaxed italic">
                   Stepped away briefly for bilateral MPFL reconstruction surgery —
